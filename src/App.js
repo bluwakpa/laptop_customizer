@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import slugify from 'slugify';
-import Summary from "./Summary"
-import FeatureDisplay from './FeatureDisplay';
-import SummaryDisplay from "./SummaryDisplay"
+import Summary from "./Summary/Summary"
+import FeatureDisplay from './FeatureDisplay/FeatureDisplay';
+import SummaryDisplay from "./SummaryDisplay/SummaryDisplay";
 import './App.css';
 
 

@@ -1,6 +1,6 @@
 import React from "react"
-import Feature from "./Feature"
-import Option from "./Option"
+import Feature from "./Feature/Feature"
+import Option from "./Option/Option"
 
 
 function FeatureDisplay(props) {

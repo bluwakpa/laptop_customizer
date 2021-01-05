@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import SummaryTotal from '../SummaryTotal/SummaryTotal';
-import SummaryOption from './SummaryOption';
+import FeatureItem from './FeatureDisplay';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<SummaryOption />, div);
+  ReactDOM.render(<FeatureItem />, div);
   ReactDOM.unmountComponentAtNode(div);
 });

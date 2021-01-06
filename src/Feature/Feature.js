@@ -1,4 +1,5 @@
 import React from "react"
+import Option from "../Option/Option"
 
 function Feature(props) {
     return(

@@ -1,4 +1,6 @@
 import React from "react"
+import SummaryDisplay from '../SummaryDisplay/SummaryDisplay'
+import Option from '../Option/Option'
 
 const USCurrencyFormat = new Intl.NumberFormat('en-US', {
     style: 'currency',

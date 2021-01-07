@@ -61,8 +61,14 @@ class App extends Component {
           <h1>ELF Computing | Laptops</h1>
         </header>
         <main>
-            <FeatureDisplay features={this.props.features} selected={this.state.selected} updateFeature={this.updateFeature}/>
+          <form className="main__form">
+            <h2>Customize your laptop</h2>
+            <FeatureDisplay features={this.props.features} selected={this.state.selected} />
+          </form>
+          <section className="main__summary">
+            <h2>Your cart</h2>
             <SummaryDisplay total={total} selected={this.state.selected} />
+          </section>
         </main>
       </div>
     );

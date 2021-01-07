@@ -1,7 +1,6 @@
 import React from "react"
 import Feature from "../Feature/Feature"
 import Option from "../Option/Option"
-import '../App.css';
 
 
 function FeatureDisplay(props) {
@@ -16,14 +15,7 @@ function FeatureDisplay(props) {
             });
       
             return (
-              <>
-                <form className="main__form">
-                  <section className="main__summary">
-                    <h2>Customize your laptop</h2>
-                    <Feature feature={feature} options={options} featureHash={featureHash}/>
-                  </section>
-                </form>
-              </>
+              <Feature feature={feature} options={options} featureHash={featureHash}/>
             );
         })
     )

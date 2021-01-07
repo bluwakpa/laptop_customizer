@@ -5,16 +5,16 @@ import './App.css';
 
 function MainForm(props) {
   return (
-    Object.keys(props.features).map((feature, idx) => {
-        const featureHash = feature + '-' + idx;
-        const options = props.features[feature].map(item => {
+    Object.keys(this.props.state.selected).map((feature, idx) => { 
+      const featureHash = feature + '-' + idx; 
+      const Options = this.props.state.selected[feature];
           
           return (
            <Option item={item} feature={feature} selected={props.selected} updateFeature={props.updateFeature}/> 
           );
         }
 
-            return(
+            return (
               <fieldset className="feature" key={props.featureHash}>
                 <legend className="feature__name">
                   <h3>{props.feature}</h3>
@@ -22,7 +22,6 @@ function MainForm(props) {
                   {props.options}
               </fieldset>
             )
-      }
 }
 
 export default MainForm

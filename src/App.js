@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 //import slugify from 'slugify';
-//import Summary from "./Summary/Summary"
 import MainSummary from "./MainSummary/MainSummary";
-//import Feature from "./Feature/Feature"
+//import MainForm from "./MainForm/MainForm"
 //import Specs from './Specs/Specs';
-//import Store from './Store/Store'
+//import Total from './Total/Total'
 //import Option from './Option/Option'
 import './App.css';
 

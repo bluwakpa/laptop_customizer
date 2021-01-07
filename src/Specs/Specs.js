@@ -1,5 +1,6 @@
 import React from "react"
 import MainForm from "../MainForm/MainForm"
+import Parts from '../Parts/Parts'
 import './App.css';
 
 function Specs(props) {     
@@ -7,7 +8,7 @@ function Specs(props) {
     <main>
       <form className="main__form">
         <h2>Customize your laptop</h2>
-          <Specs features={this.props.features} selected={this.state.selected} />
+          <Parts features={this.props.features} selected={this.state.selected} />
           <MainForm feature={feature} options={options} featureHash={featureHash}/>
       </form>
     </main>

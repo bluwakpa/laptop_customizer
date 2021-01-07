@@ -6,6 +6,17 @@ const USCurrencyFormat = new Intl.NumberFormat('en-US', {
     currency: 'USD'
 });
 
+class Option extends Component {
+  constructor(props) {
+    super(props);
+      this.updateFeature = (feature, newValue) => {
+  const selected = Object.assign({}, this.state.selected);
+  selected[feature] = newValue;
+  this.state({
+    selected
+  });
+};
+
 function Option(props) {
     const itemHash = slugify(JSON.stringify(props.item));
     return (

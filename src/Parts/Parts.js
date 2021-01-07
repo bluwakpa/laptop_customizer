@@ -1,4 +1,4 @@
-const FEATURES = {
+export const FEATURES = {
     Processor: [
       {
         name: '17th Generation Intel Core HB (7 Core with donut spare)',

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 //import slugify from 'slugify';
 //import Summary from "./Summary/Summary"
-import SummaryDisplay from "./SummaryDisplay/SummaryDisplay";
+import MainSummary from "./MainSummary/MainSummary";
 //import Feature from "./Feature/Feature"
-import FeatureDisplay from './FeatureDisplay/FeatureDisplay';
+//import Specs from './Specs/Specs';
 //import Store from './Store/Store'
 //import Option from './Option/Option'
 import './App.css';
@@ -61,13 +61,10 @@ class App extends Component {
           <h1>ELF Computing | Laptops</h1>
         </header>
         <main>
-          <form className="main__form">
-            <h2>Customize your laptop</h2>
-            <FeatureDisplay features={this.props.features} selected={this.state.selected} />
-          </form>
+          
           <section className="main__summary">
             <h2>Your cart</h2>
-            <SummaryDisplay total={total} selected={this.state.selected} />
+            <MainSummary total={total} selected={this.state.selected} />
           </section>
         </main>
       </div>

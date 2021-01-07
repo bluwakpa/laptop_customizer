@@ -1,16 +1,28 @@
 import React from "react"
 import Option from "../Option/Option"
+import Parts from "../Parts/Parts"
 import './App.css';
 
 function MainForm(props) {
-    return(
-        <fieldset className="feature" key={props.featureHash}>
-          <legend className="feature__name">
-            <h3>{props.feature}</h3>
-          </legend>
-          {props.options}
-        </fieldset>
-    )
+  return (
+    Object.keys(props.features).map((feature, idx) => {
+        const featureHash = feature + '-' + idx;
+        const options = props.features[feature].map(item => {
+          
+          return (
+           <Option item={item} feature={feature} selected={props.selected} updateFeature={props.updateFeature}/> 
+          );
+        }
+
+            return(
+              <fieldset className="feature" key={props.featureHash}>
+                <legend className="feature__name">
+                  <h3>{props.feature}</h3>
+                </legend>
+                  {props.options}
+              </fieldset>
+            )
+      }
 }
 
 export default MainForm

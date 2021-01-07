@@ -1,13 +1,14 @@
 import React from "react"
-//import SummaryDisplay from '../SummaryDisplay/SummaryDisplay'
-//import Option from '../Option/Option'
+import MainSummary from '../MainSummary/MainSummary'
+import Option from '../Option/Option'
+import '../App.css';
 
 const USCurrencyFormat = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD'
 });
 
-function Summary(props) {
+function Total(props) {
     return(
         <div className="summary__option" key={props.featureHash}>
           <div className="summary__option__label">{props.feature} </div>
@@ -19,4 +20,4 @@ function Summary(props) {
     )
 }
 
-export default Summary 
+export default Total

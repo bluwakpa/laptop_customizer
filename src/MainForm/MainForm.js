@@ -1,7 +1,8 @@
 import React from "react"
-//import Option from "../Option/Option"
+import Option from "../Option/Option"
+import './App.css';
 
-function Feature(props) {
+function MainForm(props) {
     return(
         <fieldset className="feature" key={props.featureHash}>
           <legend className="feature__name">
@@ -12,4 +13,4 @@ function Feature(props) {
     )
 }
 
-export default Feature
+export default MainForm

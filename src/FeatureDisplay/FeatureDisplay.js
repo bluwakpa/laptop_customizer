@@ -10,12 +10,17 @@ function FeatureDisplay(props) {
             const options = props.features[feature].map(item => {
               
               return (
-               <Option item={item} feature={feature} selected={props.selected}/> 
+               <Option item={item} feature={feature} selected={props.selected} updateFeature={props.updateFeature}/> 
               );
             });
       
             return (
-              <Feature feature={feature} options={options} featureHash={featureHash}/>
+              <>
+                <form className="main__form">
+                  <h2>Customize your laptop</h2>
+                  <Feature feature={feature} options={options} featureHash={featureHash}/>
+                </form>
+              </>
             );
         })
     )

@@ -1,6 +1,6 @@
 import React from "react"
 import Summary from "../Summary/Summary"
-import Option from '../Option/Option'
+//import Option from '../Option/Option'
 
 const USCurrencyFormat = new Intl.NumberFormat('en-US', {
     style: 'currency',

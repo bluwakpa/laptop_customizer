@@ -1,6 +1,5 @@
 import React from "react"
 import Option from "../Option/Option"
-import Parts from "../Parts/Parts"
 import './App.css';
 
 function MainForm(props) {

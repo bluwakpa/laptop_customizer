@@ -60,11 +60,7 @@ class App extends Component {
           <h1>ELF Computing | Laptops</h1>
         </header>
         <main>
-          
-          <section className="main__summary">
-            <h2>Your cart</h2>
-            <MainSummary total={total} selected={this.state.selected} />
-          </section>
+          <MainSummary total={total} selected={this.state.selected} />
         </main>
       </div>
     );

@@ -2,7 +2,7 @@ import React from "react"
 import Total from "../Total/Total"
 import Parts from '../Parts/Parts'
 import Option from '../Option/Option'
-import './App.css';
+import '../App.css';
 
 const USCurrencyFormat = new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -19,7 +19,10 @@ function MainSummary(props) {
     });
     return(
         <>
+		<section className="main__summary">
+            <h2>Your cart</h2>
             {summary}
+          </section>
             <div className="summary__total">
                 <div className="summary__total__label">Total</div>
                 <div className="summary__total__value">

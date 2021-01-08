@@ -2,6 +2,7 @@ import React from "react"
 import Total from "../Total/Total"
 import Parts from '../Parts/Parts'
 import Option from '../Option/Option'
+import Specs from '../Specs/Specs'
 import '../App.css';
 
 const USCurrencyFormat = new Intl.NumberFormat('en-US', {

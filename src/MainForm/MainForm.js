@@ -1,5 +1,6 @@
 import React from "react"
 import Option from "../Option/Option"
+import Parts from "../Parts/Parts"
 import './App.css';
 
 function MainForm(props) {
@@ -14,14 +15,14 @@ function MainForm(props) {
       }
       )
   )
-          return (
-            <fieldset className="feature" key={props.featureHash}>
-              <legend className="feature__name"> 
-                <h3>{props.feature}</h3>
-              </legend>
-                {props.options}
-            </fieldset>
-          )
+          // return (
+          //   <fieldset className="feature" key={props.featureHash}>
+          //     <legend className="feature__name"> 
+          //       <h3>{props.feature}</h3>
+          //     </legend>
+          //       {props.options}
+          //   </fieldset>
+          // )
 }
 
 export default MainForm

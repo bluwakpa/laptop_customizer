@@ -1,4 +1,4 @@
-export const FEATURES = {
+const FEATURES = {
     Processor: [
       {
         name: '17th Generation Intel Core HB (7 Core with donut spare)',
@@ -41,4 +41,4 @@ export const FEATURES = {
     ],
   };
 
-  ReactDOM.render(<App features={FEATURES}/>, document.getElementById('root'));
+  export default {FEATURES}

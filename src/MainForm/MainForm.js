@@ -1,28 +1,34 @@
-import React from "react"
-import Option from "../Option/Option"
-import Parts from "../Parts/Parts"
-import './App.css';
+import React from "react";
+import Specs from "../Specs/Specs";
 
-function MainForm(props) {
-  return (
-    Object.keys(this.props.state.selected).map((feature, idx) => { 
-      const featureHash = feature + '-' + idx; 
-      const Options = this.props.state.selected[feature];
-    
-        return (
-         <Option item={item} feature={feature} selected={props.selected} updateFeature={props.updateFeature}/> 
-        );
-      }
+class MainForm extends React.Component {
+  render() {
+    const {
+      features,
+      updateFeature,
+      selected,
+    } = this.props;
+
+    const featuresA = Object.keys(features).map((feature, idx) => {
+      const featureHash = feature + "-" + idx;
+      return (
+        <Specs
+          key={featureHash}
+          features={features}
+          updateFeature={updateFeature}
+          selected={selected}
+          feature={feature}
+          idx={idx} />
       )
-  )
-          // return (
-          //   <fieldset className="feature" key={props.featureHash}>
-          //     <legend className="feature__name"> 
-          //       <h3>{props.feature}</h3>
-          //     </legend>
-          //       {props.options}
-          //   </fieldset>
-          // )
+    });
+
+    return (
+      <form className="main__form">
+        <h2>Customize your laptop</h2>
+        {featuresA}
+      </form>
+    );
+  }
 }
 
-export default MainForm
+export default MainForm;

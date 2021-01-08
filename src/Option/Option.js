@@ -1,30 +1,31 @@
 import React from "react";
-import slugify from 'slugify';
-import Parts from '../Parts/Parts'
-import '../App.css';
 
-const USCurrencyFormat = new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD'
-});
+class Option extends React.Component {
+  render() {
+    const {
+      feature,
+      selected,
+      idx
+    } = this.props;
 
-function Option(props) {
-    const itemHash = slugify(JSON.stringify(props.item));
+    const USCurrencyFormat = new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: "USD"
+    });
+
+    const featureHash = feature + "-" + idx;
+    const selectedOption = selected[feature];
+
     return (
-        <div key={itemHash} className="feature__item">
-            <input
-              type="radio"
-              id={itemHash}
-              className="feature__option"
-              name={slugify(props.feature)}
-              checked={props.item.name === props.selected[props.feature].name}
-              onChange={e => props.updateFeature(props.feature, props.item)}
-            />
-            <label htmlFor={itemHash} className="feature__label">
-              {props.item.name} ({USCurrencyFormat.format(props.item.cost)})
-            </label>
+      <div className="summary__option" key={featureHash}>
+        <div className="summary__option__label">{feature} </div>
+        <div className="summary__option__value">{selectedOption.name}</div>
+        <div className="summary__option__cost">
+          {USCurrencyFormat.format(selectedOption.cost)}
         </div>
-    )
+      </div>
+    );
+  }
 }
 
 export default Option

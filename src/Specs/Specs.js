@@ -1,18 +1,41 @@
-import React from "react"
-import MainForm from "../MainForm/MainForm"
-import Parts from '../Parts/Parts'
-import './App.css';
+import React from "react";
+import slugify from "slugify";
+import Parts from "../Parts/Parts";
 
-function Specs(props) {     
-  return (
-    <main>
-      <form className="main__form">
-        <h2>Customize your laptop</h2>
-          <Parts features={this.props.features} selected={this.state.selected} />
-          <MainForm feature={feature} options={options} featureHash={featureHash}/>
-      </form>
-    </main>
-  );
+class Specs extends React.Component {
+  render() {
+    const {
+      features,
+      feature,
+      selected,
+      idx,
+      updateFeature
+    } = this.props;
+    
+    const featureHash = feature + "-" + idx;
+    const options = features[feature].map(item => {
+      const itemHash = slugify(JSON.stringify(item));
+
+      return (
+        <Parts
+          key={itemHash}
+          item={item}
+          feature={feature}
+          selected={selected}
+          updateFeature={updateFeature}
+        />
+      );
+    });
+
+    return (
+      <fieldset className="feature" key={featureHash}>
+        <legend className="feature__name">
+          <h3>{feature}</h3>
+        </legend>
+        {options}
+      </fieldset>
+    );
+  }
 }
 
-export default Specs
+export default Specs;

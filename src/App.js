@@ -4,8 +4,6 @@ import MainForm from "./MainForm/MainForm";
 import { FEATURES } from './index';
 import './App.css';
 
-console.log(FEATURES)
-
 class App extends Component {
   state = {
     selected: {
@@ -39,6 +37,7 @@ class App extends Component {
   render() {
     const { features } = this.props;
     const { selected } = this.state;
+    //console.log(FEATURES)
 
     return (
       <div className="App">

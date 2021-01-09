@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import MainSummary from "./MainSummary/MainSummary";
-import MainForm from "./MainForm/MainForm"
+import MainForm from "./MainForm/MainForm";
+import { FEATURES } from './index';
 import './App.css';
+
+console.log(FEATURES)
 
 class App extends Component {
   state = {
@@ -44,7 +47,7 @@ class App extends Component {
         </header>
         <main>
           <MainForm
-            features={features}
+            features={FEATURES}
             selected={selected}
             updateFeature={(feature, newValue) =>
               this.updateFeature(feature, newValue)

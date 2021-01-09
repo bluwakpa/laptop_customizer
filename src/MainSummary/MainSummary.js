@@ -1,6 +1,7 @@
-import React from "react"
-import Total from "../Total/Total"
-import Option from '../Option/Option'
+import React from "react";
+import Total from "../Total/Total";
+import Option from '../Option/Option';
+import {FEATURES} from '../index';
 import '../App.css';
 
 class MainSummary extends React.Component {
